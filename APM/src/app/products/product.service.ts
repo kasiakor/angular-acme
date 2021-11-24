@@ -9,7 +9,7 @@ import { IProduct } from "./product";
 })
 export class ProductService {
 
-private productsUrl = 'api/products/product.json';
+private productsUrl = 'api/products/products.json';
 
 //provide the instance of http client service 
   constructor( private http: HttpClient ) {}
