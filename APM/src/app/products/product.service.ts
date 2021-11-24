@@ -15,7 +15,7 @@ private productsUrl = 'api/products/products.json';
   constructor( private http: HttpClient ) {}
     getProducts(): Observable<IProduct[]> {
       return this.http.get<IProduct[]>(this.productsUrl).pipe(
-        tap(data => console.log(data)),
+        tap(data => console.log(JSON.stringify(data))),
         catchError(this.handleError)
 
       )  
