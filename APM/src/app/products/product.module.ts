@@ -7,8 +7,7 @@ import { StarComponent } from '../shared/star.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailsGuard } from './product-details.guard';
-
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,8 @@ import { ProductDetailsGuard } from './product-details.guard';
         canActivate: [ProductDetailsGuard],
         component: ProductDetailsComponent
        }
-    ])
+    ]),
+    SharedModule
    
   ]
 })
